@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <div class="card w-25 mx-auto mt-5">
+    <div class="card w-50 mx-auto mt-5">
       <div class="card-header px-4">
         <h1>Payment form example</h1>
       </div>
@@ -61,19 +61,19 @@
           class="billing-address d-flex justify-content-center align-items-center mb-4"
         >
           <div class="mb-3 w-50 mx-2">
-            <label for="billing-name-input" class="form-label"
-              >First Name</label
-            >
-            <input type="text" class="form-control" id="billing-name-input" />
-          </div>
-          <div class="mb-3 w-50 mx-2">
-            <label for="billing-Last-name-input" class="form-label"
-              >Last Name</label
-            >
+            <label for="billing-name-input" class="form-label">First Name</label>
             <input
               type="text"
               class="form-control"
-              id="billing-Last-name-input"
+              id="billing-name-input"
+            />
+          </div>
+          <div class="mb-3 w-50 mx-2">
+            <label for="billing-Last-name-input" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="billing-Last-name-input" 
             />
           </div>
         </div>
@@ -81,39 +81,35 @@
         <div class="address d-flex justify-content-center mb-4">
           <div class="mb-3 w-50 mx-2">
             <label for="city-input" class="form-label">City</label>
-            <input type="text" class="form-control" id="city-input" />
+            <input
+              type="text"
+              class="form-control"
+              id="city-input"
+            />
           </div>
           <div class="mb-3 w-25 mx-2">
             <label for="state-input" class="form-label">State</label>
-            <input type="text" class="form-control" id="state-input" />
+            <input
+              type="text"
+              class="form-control"
+              id="city-input"
+            />
           </div>
-          <div class="mb-3 w-25 mx-2">
-            <label for="postal-input" class="form-label">Postal Code</label>
-            <input type="text" class="form-control" id="postal-input" />
-          </div>
-        </div>
+            <div class="mb-3 w-25 mx-2">
+                <label for="zip-input" class="form-label">Zip Code</label>
+                <input
+                type="text"
+                class="form-control"
+                id="zip-input"
+                />
       </div>
-      <!--Pay method & Message-->
-      <div class="pay-method-message">
-        <div class="pay-method mx-4">
-          <span>We accept: </span>
-          <div class="card-options d-flex justif">
-            <div class="form-check">
-              <input type="radio" class="form-check-input" />
-              <label for="radio-mastercard"></label>
-            </div>
-            <div class="form-check">
-              <input type="radio" class="form-check-input" />
-              <label for="radio-mastercard"></label>
-            </div>
-            <div class="form-check">
-              <input type="radio" class="form-check-input" />
-              <label for="radio-mastercard"></label>
-            </div>
-            <div class="form-check">
-              <input type="radio" class="form-check-input" />
-              <label for="radio-mastercard"></label>
-            </div>
+      <div class="card-footer">
+
+      </div>
+    </div>
+
+    <script
+            />
           </div>
         </div>
       </div>
