@@ -17,152 +17,220 @@
       src="https://kit.fontawesome.com/a259d7db0e.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Form</title>
   </head>
 
   <body>
-    <div class="card w-25 mx-auto mt-5">
-      <div class="card-header px-4">
-        <h1>Payment form example</h1>
-      </div>
-      <div class="card-body">
-        <!-- Payment -->
-        <div class="credit-card d-flex justify-content-center mb-4">
-          <div class="mb-3 w-50 ms-2 me-4">
-            <label for="card-number-input" class="form-label">Card #</label>
-            <input
-              type="text"
-              class="form-control w-100"
-              id="card-number-input"
-              placeholder="XXXXXXXXXXXXXXXX"
-            />
-          </div>
-          <div class="mb-3 w-25 mx-2">
-            <label for="card-cvc-input" class="form-label">CVC #</label>
-            <input
-              type="text"
-              class="form-control"
-              id="card-cvc-input"
-              placeholder="0000"
-            />
-          </div>
-          <div class="mb-3 w-25 mx-2">
-            <label for="card-amount-input" class="form-label">Amount</label>
-            <div class="input-group">
-              <span class="input-group-text">$</span>
-              <input
-                type="text"
-                class="form-control"
-                id="card-amount-input"
-                placeholder="Amount"
-              />
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mt-5">
+            <!--Card header-->
+            <div class="card-header px-4">
+              <h1>Payment form example</h1>
+            </div>
+
+            <!-- Payment form -->
+            <div class="card-body">
+              <div class="row mb-4">
+                <div class="col-12">
+                  <div class="p-2 fields-missing-container">
+                    <h6 class="m-2">Some fields are missing</h6>
+                  </div>
+                </div>
+              </div>
+              <!-- Payment -->
+              <div class="row mb-md-4">
+                <div class="col-12 col-md-6">
+                  <label for="card-number-input" class="form-label"
+                    >Card #</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="card-number-input"
+                    placeholder="XXXXXXXXXXXXXXXX"
+                  />
+                </div>
+                <div class="col-12 col-md-3 mt-3 mt-md-0">
+                  <div class="mb-3">
+                    <label for="card-cvc-input" class="form-label">CVC #</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="card-cvc-input"
+                      placeholder="0000"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="mb-3">
+                    <label for="card-amount-input" class="form-label"
+                      >Amount</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="card-amount-input"
+                        placeholder="Amount"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="credit-card">
+                <!-- Billing Address -->
+                <div class="billing-address">
+                  <!-- User-info -->
+                  <div class="row mb-md-4">
+                    <div class="col-12 col-md-6">
+                      <div class="mb-3">
+                        <label for="billing-name-input" class="form-label"
+                          >First Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="billing-name-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="mb-3">
+                        <label for="billing-Last-name-input" class="form-label"
+                          >Last Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="billing-Last-name-input"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- User-Address -->
+                <div class="row mb-md-4">
+                  <div class="col-12 col-md-6 city-field">
+                    <div class="mb-3">
+                      <label for="city-input" class="form-label">City</label>
+                      <input type="text" class="form-control" id="city-input" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 state-field">
+                    <div class="mb-3">
+                      <label for="state-input" class="form-label">State</label>
+                      <select class="form-select" aria-label="Default">
+                        <option selected>Pick a state</option>
+                        <option value="1">State 1</option>
+                        <option value="2">State 2</option>
+                        <option value="3">State 3</option>
+                        <option value="4">State 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 postal-code-field">
+                    <div class="mb-3">
+                      <label for="postal-input" class="form-label"
+                        >Postal Code</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="postal-input"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Pay method & Message -->
+              <div class="row mb-md-4 d-flex justify-content-between">
+                <div class="col-sm-12 col-md-6 col-xxl-4">
+                  <div class="pay-method">
+                    <span>We accept: </span>
+                    <div
+                      class="card-options d-flex flex-wrap justify-content-between justify-content-md-evenly bg-dark mt-2 p-2 rounded"
+                    >
+                      <div class="form-check mx-2">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="payment-method"
+                          id="radio-mastercard"
+                        />
+                        <label for="radio-mastercard"
+                          ><i class="fa-brands fa-cc-mastercard text-white"></i
+                        ></label>
+                      </div>
+                      <div class="form-check mx-2">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="payment-method"
+                          id="radio-visa"
+                        />
+                        <label for="radio-visa"
+                          ><i class="fa-brands fa-cc-visa text-white"></i
+                        ></label>
+                      </div>
+                      <div class="form-check mx-2">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="payment-method"
+                          id="radio-diners-club"
+                        />
+                        <label for="radio-diners-club">
+                          <i class="fa-brands fa-cc-diners-club text-white"></i>
+                        </label>
+                      </div>
+                      <div class="form-check mx-2">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="payment-method"
+                          id="radio-american-express"
+                        />
+                        <label for="radio-american-express"
+                          ><i class="fa-brands fa-cc-amex text-white"></i
+                        ></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-6">
+                  <div class="message">
+                    <div class="input-group d-flex flex-column">
+                      <label for="message-input" class="form-label"
+                        >Message</label
+                      >
+                      <textarea
+                        id="message-input"
+                        class="form-control w-100"
+                        rows="3"
+                      ></textarea>
+                      <p>Add any notes here.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Footer -->
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-9"></div>
+                <div class="col-12 col-md-3 d-flex flex-column flex-md-row justify-content-end">
+                  <div class="btn btn-secondary mt-1 me-md-1">Cancel</div>
+                  <div class="btn btn-primary mt-1 ms-md-1">Send</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Billing Address -->
-        <div
-          class="billing-address d-flex justify-content-center align-items-center mb-4"
-        >
-          <div class="mb-3 w-50 mx-2">
-            <label for="billing-name-input" class="form-label"
-              >First Name</label
-            >
-            <input type="text" class="form-control" id="billing-name-input" />
-          </div>
-          <div class="mb-3 w-50 mx-2">
-            <label for="billing-Last-name-input" class="form-label"
-              >Last Name</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="billing-Last-name-input"
-            />
-          </div>
-        </div>
-        <!-- Address -->
-        <div class="address d-flex justify-content-center mb-4">
-          <div class="mb-3 w-50 mx-2">
-            <label for="city-input" class="form-label">City</label>
-            <input type="text" class="form-control" id="city-input" />
-          </div>
-          <div class="mb-3 w-25 mx-2">
-            <label for="state-input" class="form-label">State</label>
-            <input type="text" class="form-control" id="state-input" />
-          </div>
-          <div class="mb-3 w-25 mx-2">
-            <label for="postal-input" class="form-label">Postal Code</label>
-            <input type="text" class="form-control" id="postal-input" />
-          </div>
-        </div>
-      </div>
-      <!--Pay method & Message-->
-      <div class="pay-method-message d-flex justify-content-between">
-        <div class="pay-method mx-4">
-          <span>We accept: </span>
-          <div
-            class="card-options mx-3 d-flex justify-content-center bg-dark p-2"
-          >
-            <div class="form-check mx-2">
-              <input
-                type="radio"
-                class="form-check-input"
-                name="payment-method"
-                id="radio-mastercard"
-              />
-              <label for="radio-mastercard"
-                ><i class="fa-brands fa-cc-mastercard text-white"></i
-              ></label>
-            </div>
-            <div class="form-check mx-2">
-              <input
-                type="radio"
-                class="form-check-input"
-                name="payment-method"
-                id="radio-visa"
-              />
-              <label for="radio-visa"
-                ><i class="fa-brands fa-cc-visa text-white"></i
-              ></label>
-            </div>
-            <div class="form-check mx-2">
-              <input
-                type="radio"
-                class="form-check-input"
-                name="payment-method"
-                id="radio-diners-club"
-              />
-              <label for="radio-diners-club">
-                <i class="fa-brands fa-cc-diners-club text-white"></i>
-              </label>
-            </div>
-            <div class="form-check mx-2">
-              <input
-                type="radio"
-                class="form-check-input"
-                name="payment-method"
-                id="radio-american-express"
-              />
-              <label for="radio-american-express"
-                ><i class="fa-brands fa-cc-amex text-white"></i
-              ></label>
-            </div>
-          </div>
-        </div>
-        <div class="message mx-4">
-          <div class="input-group d-flex flex-column">
-            <label for="message-input" class="form-label">Message</label>
-            <textarea
-              id="message-input"
-              class="form-control w-100"
-              rows="3"
-            ></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <button>Click Me</button>
       </div>
     </div>
 

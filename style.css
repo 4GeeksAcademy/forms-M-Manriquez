@@ -1,0 +1,13 @@
+body {
+  background-color: grey;
+}
+input::placeholder,
+.message p {
+  color: grey !important;
+}
+.fields-missing-container {
+  background-color: #f8d7da !important;
+}
+.fields-missing-container h6 {
+  color: #7d2b32;
+}
